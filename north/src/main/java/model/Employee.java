@@ -25,7 +25,18 @@ public class Employee {
 	@Column(name = "Title")
 	private String title;
 
-	public Employee() {}
+	public Employee() {
+		
+		
+	}
+	
+	public Employee(Integer employeeId, String lastName, String firstName, String title) {
+		this.employeeId = employeeId;
+		this.lastName = lastName;
+		this.firstName = firstName;
+		this.title = title;
+		
+	}
 
 	public int getEmployeeId() {
 		return employeeId;
