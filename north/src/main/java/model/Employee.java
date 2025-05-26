@@ -37,6 +37,10 @@ public class Employee {
 		this.title = title;
 		
 	}
+	public Employee(String title, String firstName, String lastName ) {
+		this(0,lastName,firstName,title);
+		
+	}
 
 	public int getEmployeeId() {
 		return employeeId;
