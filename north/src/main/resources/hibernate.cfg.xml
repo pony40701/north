@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- 資料庫連線 -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost/north</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+
+		<!-- SQL 日誌 -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+
+		<!-- **必須**：指定 Dialect，避免警告 -->
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.MySQLDialect
+		</property>
+
+		<!-- **關鍵**：告訴 Hibernate 這是一個註解的 entity -->
+		<mapping class="model.Employee" />
+	</session-factory>
+</hibernate-configuration>
